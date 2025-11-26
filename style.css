@@ -1,0 +1,14 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+body { background:#f4f6f9; color:#333; }
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:15px; background:#111827; color:#fff; }
+.nav-title { font-size:20px; font-weight:bold; }
+.container { padding:20px; }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:15px; margin-bottom:25px; }
+.card { background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+.card h3 { font-size:16px; margin-bottom:10px; }
+.card .value { font-size:24px; font-weight:bold; color:#2563eb; }
+.chart-box { background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-bottom:25px; }
+table { width:100%; border-collapse:collapse; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+thead { background:#2563eb; color:#fff; }
+th, td { padding:12px 15px; border-bottom:1px solid #eee; font-size:14px; text-align:left; }
+@media(max-width:480px) { .card h3{font-size:14px;} .card .value{font-size:20px;} th, td{font-size:12px;} }
