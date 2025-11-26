@@ -1,4 +1,3 @@
-// Sample Data
 const statsData = { users: 1342, revenue: 4870, signups: 57 };
 const users = [
 {name:"James Carter", status:"Active", plan:"Pro"},
@@ -8,7 +7,7 @@ const users = [
 {name:"Sam T.", status:"Pending", plan:"Starter"}
 ];
 
-// Login functionality
+// Login
 const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
 const loginContainer = document.getElementById("loginContainer");
@@ -22,14 +21,11 @@ if(!emailPhone || !password){
 loginError.textContent = "Please enter both email/phone and password";
 return;
 }
-// Correct login credentials for demo
 if(emailPhone.toLowerCase() === "demo" && password === "1234"){
 loginContainer.style.display = "none";
 dashboard.style.display = "block";
 animateStats();
-} else {
-loginError.textContent = "Invalid login credentials";
-}
+} else loginError.textContent = "Invalid login credentials";
 });
 
 logoutBtn.addEventListener("click", () => {
@@ -50,8 +46,8 @@ const startTime = performance.now();
 function updateStats(now){
 const progress = Math.min((now - startTime)/duration,1);
 usersCount.textContent = Math.floor(statsData.usersprogress);
-revenue.textContent = "$${Math.floor(statsData.revenue*progress).toLocaleString()}";
-signups.textContent = Math.floor(statsData.signupsprogress);
+revenue.textContent = "$"+Math.floor(statsData.revenueprogress).toLocaleString();
+signups.textContent = Math.floor(statsData.signups*progress);
 if(progress < 1) requestAnimationFrame(updateStats);
 }
 requestAnimationFrame(updateStats);
@@ -85,11 +81,10 @@ populateTable();
 });
 });
 
-// Mock Chart with tooltip
+// Mock Chart
 const canvas = document.getElementById("chartCanvas");
 const ctx = canvas.getContext("2d");
 const points = [150,120,140,90,110,70,100];
-
 function drawChart(){
 ctx.clearRect(0,0,canvas.width,canvas.height);
 ctx.beginPath();
