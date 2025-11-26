@@ -1,29 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interactive Mini SaaS Dashboard</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini SaaS Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Login Modal -->
-<div id="loginContainer" class="login-container">
-  <div class="login-box">
-    <h2>Sign In</h2>
-    <input type="text" id="emailPhone" placeholder="Gmail or Phone">
-    <input type="password" id="password" placeholder="Password">
-    <button id="loginBtn">Sign In</button>
-    <p id="loginError" class="error"></p>
-  </div>
-</div>
-
-<!-- Dashboard -->
-<div id="dashboard" style="display:none;">
   <nav class="navbar">
     <span class="nav-title">SaaS Dashboard</span>
-    <button id="logoutBtn">Logout</button>
   </nav>
 
   <div class="container">
@@ -34,7 +19,7 @@
     </div>
 
     <div class="chart-box">
-      <h3>User Growth</h3>
+      <h3 style="margin-bottom:10px;">User Growth</h3>
       <canvas id="chartCanvas" width="100%" height="200"></canvas>
     </div>
 
@@ -45,8 +30,7 @@
       <tbody id="userTableBody"></tbody>
     </table>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
