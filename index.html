@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini SaaS Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="nav-title">SaaS Dashboard</span>
+  </nav>
+
+  <div class="container">
+    <div class="stats">
+      <div class="card"><h3>Active Users</h3><span class="value" id="usersCount">0</span></div>
+      <div class="card"><h3>Monthly Revenue</h3><span class="value" id="revenue">$0</span></div>
+      <div class="card"><h3>Signups Today</h3><span class="value" id="signups">0</span></div>
+    </div>
+
+    <div class="chart-box">
+      <h3 style="margin-bottom:10px;">User Growth</h3>
+      <canvas id="chartCanvas" width="100%" height="200"></canvas>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>User</th><th>Status</th><th>Plan</th></tr>
+      </thead>
+      <tbody id="userTableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
