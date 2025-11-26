@@ -22,7 +22,8 @@ if(!emailPhone || !password){
 loginError.textContent = "Please enter both email/phone and password";
 return;
 }
-if(emailPhone === "demo" && password === "1234"){
+// Correct login credentials for demo
+if(emailPhone.toLowerCase() === "demo" && password === "1234"){
 loginContainer.style.display = "none";
 dashboard.style.display = "block";
 animateStats();
